@@ -27,6 +27,7 @@ html {
   --bullet-space: 0.17rem;
   --bullet-size: 0.5rem;
   --month-padding: 0.48rem;
+  font-size: 10px;
 }
 
 body {
@@ -74,10 +75,17 @@ a {
 footer {
   color: var(--orange-title);
   display: flex;
+  font-size: 1rem;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  footer {
+    font-size: 0.6rem;
+  }
 }
 
 .underline {
@@ -108,7 +116,7 @@ footer {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .resume {
@@ -276,18 +284,23 @@ main {
   background-color: var(--black-digit);
 }
 
-@media screen and (orientation: portrait) and (max-width: 960px) {
+@media screen and (orientation: portrait) and (max-width: 768px) {
   html {
     font-size: 10px;
   }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (min-width: 769px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  html {
+    font-size: 22px;
+  }
+}
 @media screen and (min-width: 1367px) and (max-width: 1600px) {
   html {
     font-size: 25px;
